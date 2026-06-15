@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: 10 25 47;
+    --secondary: 0 174 239;
+    --accent: 0 255 255;
+    --white: 255 255 255;
+  }
+
+  * {
+    @apply transition-colors duration-300;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-gray-950 text-white;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-r from-[#0A192F] via-[#00AEEF] to-[#00FFFF];
+  }
+
+  .gradient-secondary {
+    @apply bg-gradient-to-b from-[#0A192F] to-gray-900;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl;
+  }
+
+  .glass-effect-dark {
+    @apply bg-black/40 backdrop-blur-md border border-white/10 rounded-xl;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 bg-gradient-to-r from-[#00AEEF] to-[#00FFFF] text-[#0A192F] font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 inline-block;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 border-2 border-[#00AEEF] text-[#00AEEF] font-semibold rounded-lg hover:bg-[#00AEEF] hover:text-[#0A192F] transition-all duration-300 inline-block;
+  }
+
+  .btn-dark {
+    @apply px-8 py-3 bg-[#0A192F] border-2 border-[#00AEEF] text-[#00AEEF] font-semibold rounded-lg hover:bg-[#00AEEF] hover:text-[#0A192F] transition-all duration-300 inline-block;
+  }
+
+  .heading-lg {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .heading-md {
+    @apply text-3xl sm:text-4xl font-bold;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .heading-sm {
+    @apply text-2xl sm:text-3xl font-bold;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-24 lg:py-32;
+  }
+
+  .glow-effect {
+    @apply shadow-lg shadow-cyan-500/50;
+  }
+
+  .glow-effect-blue {
+    @apply shadow-lg shadow-blue-500/50;
+  }
+
+  /* Animaciones */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes glow {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 20px rgba(0, 174, 239, 0.5));
+    }
+    50% {
+      filter: drop-shadow(0 0 40px rgba(0, 255, 255, 0.8));
+    }
+  }
+}
+
+/* ScrollBar personalizado */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#00AEEF] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#00FFFF];
+}
