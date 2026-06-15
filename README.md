@@ -186,3 +186,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Seguridad y Overrides de Dependencias
+
+Durante la auditoría de dependencias se detectó una vulnerabilidad moderada en `postcss` debido a una versión anidada usada por `next` en la cadena de dependencias. Para mitigar el riesgo sin aplicar actualizaciones rompientes se añadió una entrada `overrides` en `package.json` que fuerza a `next` a resolver `postcss@8.5.15` (versión segura).
+
+- Archivo modificado: `package.json` (`overrides` agregado)
+- Por qué: evitar amenazas XSS relacionadas con `postcss` mientras se mantiene la compatibilidad de `next`.
+- Recomendación: revisar periódicamente `npm audit` y planear actualizar `next` en una rama separada para validar cambios mayores.
+
+Si prefieres, puedo preparar una PR separada que actualice `next` a la última versión compatible y correr pruebas E2E antes de hacer merge.
+
+
