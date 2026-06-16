@@ -173,7 +173,7 @@ ${formData.mensaje}`;
                     value={formData.correo}
                     onChange={handleChange}
                     required
-                    placeholder="tu@correo.com"
+                    placeholder="araujoyosmarvi@gmail.com"
                     className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-[#00AEEF] focus:outline-none transition-colors"
                   />
                 </div>
@@ -187,7 +187,7 @@ ${formData.mensaje}`;
                     value={formData.telefono}
                     onChange={handleChange}
                     required
-                    placeholder="+57 3XX XXXXXXX"
+                    placeholder="+57 3225511943"
                     className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 focus:border-[#00AEEF] focus:outline-none transition-colors"
                   />
                 </div>
