@@ -11,10 +11,10 @@ export const SITE_CONFIG = {
   name: "ANDES ACADÉMICO",
   slogan: "Transformación Digital para la Educación y las Empresas",
   description: "Consultoría especializada...",
-  url: "https://tudominio.com",
-  email: "contacto@tuempresa.com",
-  phone: "+57XXXXXXXXXX",
-  whatsapp: "+57XXXXXXXXXX",
+  url: "https://andesacademico.com",
+  email: "araujoyosmarvi@gmail.com",
+  phone: "+573225511943",
+  whatsapp: "+573225511943",
 };
 ```
 
