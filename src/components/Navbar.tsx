@@ -29,9 +29,11 @@ export function Navbar() {
       <div className="container-custom">
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-r from-[#00AEEF] to-[#00FFFF] font-black text-[#0A192F]">
-              AA
-            </span>
+            <img
+              src="/images/andesasotipo.jpg"
+              alt="Andes Académico logo"
+              className="h-10 w-10 rounded-xl object-cover"
+            />
             <div className="hidden sm:block leading-tight">
               <strong className="block text-sm text-white">Andes Académico</strong>
               <span className="text-xs text-gray-400">Transformación Digital</span>
