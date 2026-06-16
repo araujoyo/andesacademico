@@ -22,6 +22,7 @@ export const SITE_CONFIG = {
   email: "contacto@andesacademico.com",
   phone: "+573225511943",
   whatsapp: "+573225511943",
+  favicon: "/favicon.ico",
 };
 
 // Menú de navegación
