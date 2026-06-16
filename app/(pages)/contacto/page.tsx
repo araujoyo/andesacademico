@@ -1,10 +1,9 @@
 "use client";
 
-import { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/sections";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function ContactPage() {
